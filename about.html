@@ -27,36 +27,51 @@
             font-size: 34px;
             margin-bottom: 20px;
             color: #444;
+            text-align: center; /* Center the sub-header */
         }
 
         p {
             font-size: 22px; /* Larger paragraph text */
             margin-bottom: 20px;
             max-width: 800px; /* Limit width for readability */
+            text-align: center; /* Center the text */
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Flexbox styling for the "woah" image next to the introduction paragraph */
+        /* Flexbox styling for the "woah" image next to the introductory paragraph */
         .content-wrapper {
             display: flex;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 30px;
+            gap: 30px;
         }
 
         .content-wrapper img {
             width: 180px;
             height: auto;
-            margin-right: 20px;
             border-radius: 10px;
         }
 
         /* Styling for the YouTube image */
         .youtube-image {
             display: block;
-            width: 100%;
-            max-width: 800px;
+            width: 50%; /* Adjusted size to make the image smaller */
+            max-width: 500px; /* Make sure it doesn't get too large */
             height: auto;
             margin: 30px auto;
             border-radius: 15px;
+        }
+
+        /* Ensuring that content is centered and aligned properly */
+        .centered-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -64,14 +79,14 @@
 <body>
     <header>
         <h1>About Me</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
+        <nav style="text-align: center;">
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <main>
+    <main class="centered-text">
         <h2>Nosa Edomwande</h2>
 
         <!-- Adds "woah.jpg" image to the left of the introductory paragraph -->
@@ -82,7 +97,7 @@
 
         <p>Recently, I started a YouTube channel, fulfilling a long-time goal of building a platform where I can share my thoughts and perspectives. I’m thrilled to have reached over 100,000 views within the first few months, and I’m excited about the channel’s future growth.</p>
 
-        <!-- Large YouTube image under the YouTube paragraph -->
+        <!-- Centered YouTube image under the YouTube paragraph -->
         <img src="yotube.jpg" alt="YouTube Channel" class="youtube-image">
 
         <p>As a first-generation American, with both of my parents originally from Nigeria, I am motivated to make them proud—by graduating college and working toward a future where they won’t have to work anymore.</p>
