@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: rgb(247, 29, 29);
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+<link rel="stylesheet" href="style.css">

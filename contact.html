@@ -1,0 +1,38 @@
+<!-- Contact page -->
+<form id="contactForm" action="/submit-form" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+<p id="responseMessage"></p>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const formDataObj = {};
+        formData.forEach((value, key) => formDataObj[key] = value);
+
+        try {
+            const response = await fetch('http://localhost:3000/submit-form', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formDataObj)
+            });
+
+            const result = await response.text();
+            document.getElementById('responseMessage').textContent = result;
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            document.getElementById('responseMessage').textContent = 'Error submitting form. Please try again.';
+        }
+    });
+</script>
