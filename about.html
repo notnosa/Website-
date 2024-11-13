@@ -6,40 +6,57 @@
     <title>About - Nosa Edomwande</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Custom font sizes  */
+        /* Custom font and layout styling for better screen fill */
         body {
-            font-size: 18px; /* Increase font size */
-            line-height: 1.6; /* line height for better readability */
+            font-size: 20px; /* Larger base font size for readability */
+            line-height: 1.8; /* Increased line spacing */
             margin: 0;
-            padding: 0;
+            padding: 20px;
+            color: #333; /* Dark color for readability */
+            background-color: #f9f9f9; /* Light background */
         }
 
         h1 {
-            font-size: 36px; /* Large header */
+            font-size: 42px;
             margin-bottom: 20px;
+            text-align: center;
+            color: #222;
         }
 
         h2 {
-            font-size: 32px; /* Larg sub-header */
-            margin-bottom: 15px;
+            font-size: 34px;
+            margin-bottom: 20px;
+            color: #444;
         }
 
         p {
-            font-size: 20px; /* Increase paragraph text size */
-            margin-bottom: 15px;
+            font-size: 22px; /* Larger paragraph text */
+            margin-bottom: 20px;
+            max-width: 800px; /* Limit width for readability */
         }
 
-        /* Flexbox styling for the image and text */
+        /* Flexbox styling for the "woah" image next to the introduction paragraph */
         .content-wrapper {
             display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+            align-items: flex-start;
+            margin-bottom: 30px;
         }
 
         .content-wrapper img {
-            width: 150px; /* Adjust image size */
+            width: 180px;
             height: auto;
             margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        /* Styling for the YouTube image */
+        .youtube-image {
+            display: block;
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 30px auto;
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -48,8 +65,8 @@
     <header>
         <h1>About Me</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
             <a href="contact.html">Contact</a>
         </nav>
     </header>
@@ -57,13 +74,16 @@
     <main>
         <h2>Nosa Edomwande</h2>
 
-        <!-- Adds image to the left of the text -->
+        <!-- Adds "woah.jpg" image to the left of the introductory paragraph -->
         <div class="content-wrapper">
             <img src="woah.jpg" alt="Woah">
             <p>Hello, and welcome to my website! My name is Nosa Edomwande. I grew up in Atlanta, Georgia, and I’m currently an IT major, graduating in 2026. Throughout my childhood, I was active in various sports like basketball, soccer, and football, but in high school, I focused solely on basketball.</p>
         </div>
 
         <p>Recently, I started a YouTube channel, fulfilling a long-time goal of building a platform where I can share my thoughts and perspectives. I’m thrilled to have reached over 100,000 views within the first few months, and I’m excited about the channel’s future growth.</p>
+
+        <!-- Large YouTube image under the YouTube paragraph -->
+        <img src="yotube.jpg" alt="YouTube Channel" class="youtube-image">
 
         <p>As a first-generation American, with both of my parents originally from Nigeria, I am motivated to make them proud—by graduating college and working toward a future where they won’t have to work anymore.</p>
 
